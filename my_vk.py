@@ -99,7 +99,7 @@ class life():
 
 subprocess.Popen("sleep 10", stdin=True, stdout=True, shell=True)
 
-print('hyu')
+print('!!!')
 
 #life.start('t')
 

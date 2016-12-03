@@ -4,7 +4,7 @@ import hashlib, binascii
 from Crypto.Cipher import AES
 import base64
 import vk
-
+import subprocess
 
 salt='fdgdsfsdfksd48u48rh4ethdgdsfasfasddsvfbmfignspwiopetcosdfxz'
 key=1
@@ -59,6 +59,8 @@ class life():
         return life.api
 
     def vk_wall(self, mess):
+        message = input('wall \n')
+        # life.vk_wall(self,message)
         life.vk_auth(self).wall.post(message=mess)
 
 
@@ -77,8 +79,7 @@ class life():
     def start(self):
         if os.path.exists("/usr/local/my_vk/vk.conf"):
             life.vk_auth(self)
-            message = input('wall \n')
-            life.vk_wall(self,message)
+
 
         else:
 
@@ -96,10 +97,11 @@ class life():
 
 
 
+subprocess.Popen("sleep 10", stdin=True, stdout=True, shell=True)
+
+print('hyu')
+
+#life.start('t')
 
 
 
-
-
-
-life.start('t')
